@@ -9,7 +9,7 @@ function useFetch() {
     async function fetchData(url) {
         isLoading.value = true
         try {
-            const data = await axios.get(url, { baseURL: 'http://localhost:5173/' })
+            const data = await axios.get(url, { baseURL: 'https://fyrre-newseller-spa-cntxj1skf-wxzvrds-projects.vercel.app/' })
             responseData.value = await data.data
         } catch (e) {
             error.value = e
