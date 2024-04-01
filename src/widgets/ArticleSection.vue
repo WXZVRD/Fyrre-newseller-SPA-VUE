@@ -45,11 +45,9 @@ export default {
   async mounted() {
     const { responseData, fetchData, error, isLoading } = useFetch();
 
-    await fetchData('src/json/articles.json');
+    await fetchData('https://fyrre-newseller-spa-vue.vercel.app/src/json/articles.json');
     if (!error.value) {
-      console.log(responseData.value[0].articles)
       this.articles = responseData.value[0];
-      console.log(this.articles.articles)
     } else {
       console.error('Error fetching data:', error.value);
     }
